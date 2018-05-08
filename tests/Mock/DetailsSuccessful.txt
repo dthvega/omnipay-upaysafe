@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "code": "00",
+  "status": "APPROVED",
+  "operation": "3DAUTH",
+  "type": "AUTH",
+  "message": "Approved",
+  "paymentMethod": "VISA",
+  "amount": 1000,
+  "currency": "USD",
+  "referenceNo": "successful-123",
+  "transactionId": "1234-123456-1234",
+  "cardNumber": "400000XXXXXX0000"
+}

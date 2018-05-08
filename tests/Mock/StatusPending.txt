@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "status": "PENDING",
+  "referenceNo": "pending-123",
+  "transactionId": "1234-123456-123"
+}

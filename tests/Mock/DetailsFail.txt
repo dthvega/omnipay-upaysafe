@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "code": "173",
+  "status": "DECLINED",
+  "operation": "3DAUTH",
+  "type": "AUTH",
+  "message": "Decline",
+  "paymentMethod": "VISA",
+  "amount": 1000,
+  "currency": "USD",
+  "referenceNo": "declined-123",
+  "transactionId": "12345-123456-123",
+  "cardNumber": "400000XXXXXX0000"
+}

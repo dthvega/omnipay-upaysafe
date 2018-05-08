@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "status": "PENDING",
+  "amount": "1000",
+  "currency": "USD",
+  "type": "AUTH",
+  "referenceNo": "5af13e5e19c9a",
+  "operation": "3D",
+  "returnUrl": "http://www.testreturn.test",
+  "paymentMethod": "",
+  "transactionId": "65017-1122334455-935",
+  "message": "Waiting",
+  "code": 283,
+  "language": null,
+  "purchaseUrl": "https://testgateway.upaysafepayment.com/payment/initialize/65017-1122334455-935"
+}
