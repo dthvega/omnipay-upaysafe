@@ -13,7 +13,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "dthvega/omnipay-upaysafe": "~1.0"
+        "dthvega/omnipay-upaysafe": "~2.0"
     }
 }
 ```
