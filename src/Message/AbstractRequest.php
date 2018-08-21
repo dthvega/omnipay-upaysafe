@@ -29,9 +29,9 @@ class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
 
         if ($this->getTestMode()) {
-            return self::$test_endpoint.$this->getMethod();
+            return self::$test_endpoint . $this->getMethod();
         }
-        return self::$live_endpoint.$this->getMethod();
+        return self::$live_endpoint . $this->getMethod();
     }
 
     /**
@@ -40,24 +40,17 @@ class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function sendData($data)
     {
-        $this->httpClient->getEventDispatcher()->addListener(
-            'request.error',
-            function ($event) {
-                if ($event['response']->isClientError()) {
-                    $event->stopPropagation();
-                }
-            }
-        );
-
-        $httpRequest = $this->httpClient->createRequest(
+        $httpResponse = $this->httpClient->request(
             'POST',
             $this->getEndpoint(),
-            [],
-            $data
+            [
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json',
+            ],
+            json_encode($data)
         );
 
-        $httpResponse  = $httpRequest->send();
-        $data = $httpResponse->json();
+        $data = json_decode($httpResponse->getBody()->getContents(), true);
 
 
         return $this->createResponse($data);

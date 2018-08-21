@@ -50,7 +50,7 @@ class GatewayTest extends GatewayTestCase
         $response = $this->gateway->purchase(
           array(
               'amount' => "10.00",
-              'currency' => 'USDS',
+              'currency' => 'USD',
               'birthday' => "2014-01-01",
               //'PaymentMethod' => '',
               'transactionId' => '5af13e5e19c9a',
